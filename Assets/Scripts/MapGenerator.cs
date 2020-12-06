@@ -10,7 +10,7 @@ public class MapGenerator : MonoBehaviour
     [Header("Spawning Settings")]
     public int numPipes = 6;
     public float spacing = 4f;
-    public float randHeightOffset = 1f;
+    public float randHeightOffset = 1.5f;
 
     private float currentSpawnOffset = 0;
 

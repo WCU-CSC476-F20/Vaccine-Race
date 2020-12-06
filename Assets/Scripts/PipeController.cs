@@ -19,8 +19,6 @@ public class PipeController : MonoBehaviour
         {
             mapGenerator.SpawnPipe();
 
-            print(gameObject.name);
-
             Destroy(gameObject);
         }
     }
