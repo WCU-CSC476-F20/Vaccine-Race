@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class MapGenerator : MonoBehaviour
 {
+    [Header("Prefabs")]
+    public GameObject pipePrefab;
+
     // Start is called before the first frame update
     void Start()
     {

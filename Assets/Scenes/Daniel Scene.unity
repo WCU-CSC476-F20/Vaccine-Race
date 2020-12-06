@@ -219,6 +219,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 2106013168}
   offset: {x: 4.5, y: 0, z: -10}
+  movementSpeed: 0.1
 --- !u!1 &679889650 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4287137024439363637, guid: 316c08f86793fb8469eae0a5bc6606cf,
@@ -422,6 +423,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Temp Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 9131856731476057759, guid: 5d988d3356d38a344bcddb1103099108,
+        type: 3}
+      propertyPath: m_BodyType
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d988d3356d38a344bcddb1103099108, type: 3}
