@@ -9,9 +9,12 @@ public class PlayerController : MonoBehaviour
     public float jumpForce = 10f;
 
     private Rigidbody2D rb;
+    private GameController gameController;
+    private bool jump;
 
     private void Awake()
     {
+        gameController = GameObject.FindGameObjectWithTag("Game Controller").GetComponent<GameController>();
         rb = GetComponent<Rigidbody2D>();
     }
 
@@ -27,21 +30,53 @@ public class PlayerController : MonoBehaviour
             rb.simulated = true;
 
             //Moves the player forward at a constant rate
-            transform.position = new Vector3(transform.position.x + movementSpeed, transform.position.y, transform.position.z);
+            rb.position = new Vector3(transform.position.x + movementSpeed, transform.position.y, transform.position.z);
+
+            if (jump)
+            {
+                jump = false;
+                rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+            }
         }
     }
 
     private void Update()
-    {   
+    {
         //Only allow player input controls when the game is NOT paused
-        if(!GameController.isPaused)
+        if (!GameController.gameOver)
         {
             //Pressing the space bar is jump
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                rb.velocity = new Vector2(rb.velocity.x, jumpForce);
-                print("Jump");
+                GameController.isPaused = false;
+                jump = true;
             }
+        }
+    }
+
+    //Runs when the player hits certain objects
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.CompareTag("Point"))
+        {
+            gameController.score++;
+        }
+        else if(collision.CompareTag("Pipe"))
+        {
+            gameController.RestartLevel();
+        }
+        else if(collision.CompareTag("Pickup"))
+        {
+            gameController.score += 5;
+            Destroy(collision.gameObject);
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if(collision.CompareTag("Spawn Bounds"))
+        {
+            gameController.RestartLevel();
         }
     }
 }

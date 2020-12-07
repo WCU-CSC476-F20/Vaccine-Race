@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PipeController : MonoBehaviour
+public class SelfDestruct : MonoBehaviour
 {
     private MapGenerator mapGenerator;
 
