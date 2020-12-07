@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Spawn Bounds
+  - Pipe
+  - Point
+  - Game Controller
+  - Pickup
   layers:
   - Default
   - TransparentFX

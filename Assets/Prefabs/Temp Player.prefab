@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 9131856731476057753}
   - component: {fileID: 9131856731476057754}
   - component: {fileID: 9131856731476057759}
-  - component: {fileID: 9131856731476057752}
+  - component: {fileID: 6582833601688789654}
   - component: {fileID: 2106013169}
   m_Layer: 0
   m_Name: Temp Player
@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 9131856731476057755}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -4.5, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -99,13 +99,13 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 2
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
---- !u!58 &9131856731476057752
+--- !u!58 &6582833601688789654
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -133,5 +133,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc380e93b9fc3904180d6634623f79a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 0.1
-  jumpForce: 1
+  movementSpeed: 0.05
+  jumpForce: 10

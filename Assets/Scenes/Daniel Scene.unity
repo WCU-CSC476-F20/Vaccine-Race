@@ -190,7 +190,7 @@ GameObject:
   - component: {fileID: 225517119}
   m_Layer: 0
   m_Name: Game Controller
-  m_TagString: Untagged
+  m_TagString: Game Controller
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -207,6 +207,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67e0d7c09f20d3d4eaf41b9a577f2b0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  score: 0
   spawnBuffer: 0.5
 --- !u!4 &225517120
 Transform:
@@ -321,6 +322,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 2106013168}
   offset: {x: 4.5, y: 0, z: -10}
+  moveSpeed: 2
 --- !u!1 &751017515
 GameObject:
   m_ObjectHideFlags: 0
@@ -352,9 +354,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pipePrefab: {fileID: 4287137024325236553, guid: 316c08f86793fb8469eae0a5bc6606cf,
     type: 3}
+  pickupPrefab: {fileID: 7279415386566549950, guid: d9e20b805b7c137458cc7f35a045e937,
+    type: 3}
   numPipes: 6
   spacing: 6
-  randHeightOffset: 1
+  randHeightOffset: 2
+  randPickupSpawnChance: 0.5
+  randPosOffset: {x: 1, y: 2}
 --- !u!4 &751017517
 Transform:
   m_ObjectHideFlags: 0
@@ -382,10 +388,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 6716422663261509656, guid: 5d988d3356d38a344bcddb1103099108,
-        type: 3}
-      propertyPath: m_TagString
-      value: Spawn Bounds
+    - target: {fileID: 2106013169, guid: 5d988d3356d38a344bcddb1103099108, type: 3}
+      propertyPath: jumpForce
+      value: 6.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2106013169, guid: 5d988d3356d38a344bcddb1103099108, type: 3}
+      propertyPath: movementSpeed
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 9131856731476057753, guid: 5d988d3356d38a344bcddb1103099108,
         type: 3}
