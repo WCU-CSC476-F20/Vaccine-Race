@@ -15,9 +15,12 @@ public class GameController : MonoBehaviour
     public bool gameOver = false;
 
     [Header("UI Control")]
-    public Text scoreText; 
+    public Text scoreText;
+    public GameObject gameUI;
     public GameObject startUI;
     public GameObject finalScoreUI;
+    public Text currentScore;
+    public Text topScore;
 
     private BoxCollider2D spawnBounds;
 
@@ -59,12 +62,39 @@ public class GameController : MonoBehaviour
         isPaused = true;
         gameOver = true;
         finalScoreUI.SetActive(true);
-        SetScoreBoard();
+        gameUI.SetActive(false);
+        
+        SaveScores();
 
         Invoke("ReloadScene", 4f);
     }
 
-    private void SetScoreBoard()
+    private void SaveScores()
+    {
+        //Checks score against highest saved score
+        if(PlayerPrefs.HasKey("TopScore"))
+        {
+            int top = PlayerPrefs.GetInt("TopScore");
+
+            if(score > top)
+            {
+                DisplayNewTopScore();
+                PlayerPrefs.SetInt("TopScore", score);
+            }
+
+            topScore.text = "High Score: " + PlayerPrefs.GetInt("TopScore").ToString();
+        }
+        else
+        {
+            DisplayNewTopScore();
+            PlayerPrefs.SetInt("TopScore", score);
+            topScore.text = "High Score: " + score.ToString();
+        }
+
+        currentScore.text = "Current Score: " + score.ToString();
+    }
+
+    private void DisplayNewTopScore()
     {
 
     }
