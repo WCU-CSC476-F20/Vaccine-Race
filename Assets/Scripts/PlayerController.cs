@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CharacterController : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
     [Header("Movement Settings")]
     public float movementSpeed = 0.1f;
-    public float jumpForce = 1f;
+    public float jumpForce = 10f;
 
     private Rigidbody2D rb;
 
@@ -39,7 +39,7 @@ public class CharacterController : MonoBehaviour
             //Pressing the space bar is jump
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                rb.AddForce(new Vector2(0, jumpForce));
+                rb.velocity = new Vector2(rb.velocity.x, jumpForce);
                 print("Jump");
             }
         }
