@@ -4,22 +4,28 @@ using UnityEngine;
 
 public class SelfDestruct : MonoBehaviour
 {
+    public float distance;
     private MapGenerator mapGenerator;
+    private GameObject player;
 
     // Start is called before the first frame update
     void Start()
     {
-        mapGenerator = GetComponentInParent<MapGenerator>();
+        mapGenerator = GameObject.FindGameObjectWithTag("Map Generator").GetComponent<MapGenerator>();
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
+    private void Update()
     {
-        //Spawns a new pipe when it goes out of bounds and destroys itself
-        if(collision.CompareTag("Spawn Bounds"))
+        distance = transform.position.x - player.transform.position.x;
+
+        if (distance <= mapGenerator.maxDistance)
         {
-            mapGenerator.SpawnPipe();
+            if (tag == "Pipe Group")
+                mapGenerator.SpawnPipe();
 
             Destroy(gameObject);
         }
+
     }
 }

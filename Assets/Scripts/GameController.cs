@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
@@ -10,8 +11,13 @@ public class GameController : MonoBehaviour
 
     [Header("Game Settings")]
     public float spawnBuffer = 0.5f;
-    public static bool isPaused = true;
-    public static bool gameOver = false;
+    public bool isPaused = true;
+    public bool gameOver = false;
+
+    [Header("UI Control")]
+    public Text scoreText; 
+    public GameObject startUI;
+    public GameObject finalScoreUI;
 
     private BoxCollider2D spawnBounds;
 
@@ -25,6 +31,8 @@ public class GameController : MonoBehaviour
     void Start()
     {
         SetSpawnBounds();
+
+        scoreText.text = "0";
     }
 
     // Update is called once per frame
@@ -33,6 +41,9 @@ public class GameController : MonoBehaviour
         //Pauses the game
         if (Input.GetKeyDown(KeyCode.Escape))
             isPaused = !isPaused;
+
+        //Updates the score display
+        scoreText.text = score.ToString();
     }
 
     private void SetSpawnBounds()
@@ -47,7 +58,15 @@ public class GameController : MonoBehaviour
     {
         isPaused = true;
         gameOver = true;
-        Invoke("ReloadScene", 2f);
+        finalScoreUI.SetActive(true);
+        SetScoreBoard();
+
+        Invoke("ReloadScene", 4f);
+    }
+
+    private void SetScoreBoard()
+    {
+
     }
 
     private void ReloadScene()

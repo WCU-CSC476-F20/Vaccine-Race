@@ -21,7 +21,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (GameController.isPaused)
+        if (gameController.isPaused)
         {
             rb.simulated = false;
         }
@@ -43,12 +43,13 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         //Only allow player input controls when the game is NOT paused
-        if (!GameController.gameOver)
+        if (!gameController.gameOver)
         {
             //Pressing the space bar is jump
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                GameController.isPaused = false;
+                gameController.isPaused = false;
+                gameController.startUI.SetActive(false);
                 jump = true;
             }
         }

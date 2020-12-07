@@ -9,6 +9,8 @@ TagManager:
   - Point
   - Game Controller
   - Pickup
+  - Map Generator
+  - Pipe Group
   layers:
   - Default
   - TransparentFX
