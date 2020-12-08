@@ -12,6 +12,9 @@ TagManager:
   - Map Generator
   - Pipe Group
   - Cloud
+  - OpenShop
+  - ShopUI
+  - CloseShop
   layers:
   - Default
   - TransparentFX

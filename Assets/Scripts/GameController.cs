@@ -20,6 +20,9 @@ public class GameController : MonoBehaviour
     public GameObject startUI;
     public GameObject finalScoreUI;
     public GameObject highScoreUI;
+    public GameObject shopUI;
+    public GameObject openshopUI;
+    public GameObject closeshopUI;
     public Text currentScore;
     public Text topScore;
 
@@ -94,7 +97,18 @@ public class GameController : MonoBehaviour
 
         currentScore.text = "Current Score: " + score.ToString();
     }
-
+    public void OpenShop()
+    {
+        shopUI.SetActive(true);
+        openshopUI.SetActive(false);
+        closeshopUI.SetActive(true);
+    }
+    public void CloseShop()
+    {
+        shopUI.SetActive(false);
+        closeshopUI.SetActive(false);
+        openshopUI.SetActive(true);
+    }
     private void ReloadScene()
     {
         SceneManager.LoadScene(0);
