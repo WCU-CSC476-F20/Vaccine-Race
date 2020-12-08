@@ -19,6 +19,7 @@ public class GameController : MonoBehaviour
     public GameObject gameUI;
     public GameObject startUI;
     public GameObject finalScoreUI;
+    public GameObject highScoreUI;
     public Text currentScore;
     public Text topScore;
 
@@ -78,7 +79,7 @@ public class GameController : MonoBehaviour
 
             if(score > top)
             {
-                DisplayNewTopScore();
+                highScoreUI.SetActive(true);
                 PlayerPrefs.SetInt("TopScore", score);
             }
 
@@ -86,17 +87,12 @@ public class GameController : MonoBehaviour
         }
         else
         {
-            DisplayNewTopScore();
+            highScoreUI.SetActive(true);
             PlayerPrefs.SetInt("TopScore", score);
             topScore.text = "High Score: " + score.ToString();
         }
 
         currentScore.text = "Current Score: " + score.ToString();
-    }
-
-    private void DisplayNewTopScore()
-    {
-
     }
 
     private void ReloadScene()

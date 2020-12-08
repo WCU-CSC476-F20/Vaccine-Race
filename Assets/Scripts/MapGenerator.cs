@@ -18,7 +18,14 @@ public class MapGenerator : MonoBehaviour
     public float randPickupSpawnChance = 0.35f;
     public Vector2 randPosOffset = new Vector2(0.5f, 1f);
 
+    [Header("Clouds")]
+    public GameObject cloudPrefab;
+    public Sprite[] cloudSprites;
+    public int numTotalClouds = 20;
+    public Vector2 randHeightRange = new Vector2(-5,5);
+
     private float currentSpawnOffset = 0;
+    private float currentSpawnOffsetCloud = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -30,11 +37,16 @@ public class MapGenerator : MonoBehaviour
             else
                 SpawnPipe();
         }
+
+        for (int i = 0; i < numTotalClouds; i++)
+        {
+            SpawnCloud();
+        }
     }
 
     public void SpawnPipeNotRandom()
     {
-        GameObject currentPipe = Instantiate<GameObject>(pipePrefab, this.transform);
+        GameObject currentPipe = Instantiate(pipePrefab, transform);
         currentPipe.transform.position = new Vector3(currentPipe.transform.position.x + currentSpawnOffset, 0, currentPipe.transform.position.z);
 
         currentSpawnOffset += spacing;
@@ -44,7 +56,7 @@ public class MapGenerator : MonoBehaviour
     {
         float randHeight = Random.Range(-randHeightOffset, randHeightOffset);
 
-        GameObject currentPipe = Instantiate<GameObject>(pipePrefab, this.transform);
+        GameObject currentPipe = Instantiate(pipePrefab, transform);
         currentPipe.transform.position = new Vector3(currentPipe.transform.position.x + currentSpawnOffset, randHeight, currentPipe.transform.position.z);
 
         if(Random.value <= randPickupSpawnChance)
@@ -57,5 +69,22 @@ public class MapGenerator : MonoBehaviour
         }
 
         currentSpawnOffset += spacing;
+    }
+
+    public void SpawnCloud()
+    {
+        float randHeight = Random.Range(randHeightRange.x, randHeightRange.y);
+        int randSprite = Random.Range(0, cloudSprites.Length - 1);
+        int randLayer = Random.Range(1, cloudSprites.Length - 1);
+        float randSpeed = Random.Range(0.25f, 1);
+
+        GameObject cloud = Instantiate(cloudPrefab, transform);
+        cloud.transform.position = new Vector3(cloud.transform.position.x + currentSpawnOffsetCloud, randHeight, cloud.transform.position.z);
+
+        cloud.GetComponent<CloudScroll>().speed = randSpeed;
+        cloud.GetComponent<SpriteRenderer>().sprite = cloudSprites[randSprite];
+        cloud.GetComponent<SpriteRenderer>().sortingOrder = -randLayer;
+
+        currentSpawnOffsetCloud += spacing;
     }
 }

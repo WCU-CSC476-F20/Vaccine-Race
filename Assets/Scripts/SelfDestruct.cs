@@ -23,6 +23,8 @@ public class SelfDestruct : MonoBehaviour
         {
             if (tag == "Pipe Group")
                 mapGenerator.SpawnPipe();
+            if (tag == "Cloud")
+                mapGenerator.SpawnCloud();
 
             Destroy(gameObject);
         }

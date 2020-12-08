@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 72330365937755458}
   - component: {fileID: 1589829769630916660}
   m_Layer: 0
-  m_Name: Temp Pipes
+  m_Name: PipeGroup
   m_TagString: Pipe Group
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -48,6 +48,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86550b3b445d73749aef11b4c6df5f2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  distance: 0
 --- !u!50 &72330365937755458
 Rigidbody2D:
   serializedVersion: 4
@@ -167,7 +168,7 @@ PrefabInstance:
     - target: {fileID: 8486855686726631494, guid: ab8bc097c26bd56438f9bf811a759186,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -11
+      value: -9.5
       objectReference: {fileID: 0}
     - target: {fileID: 8486855686726631494, guid: ab8bc097c26bd56438f9bf811a759186,
         type: 3}
@@ -242,7 +243,7 @@ PrefabInstance:
     - target: {fileID: 8486855686726631494, guid: ab8bc097c26bd56438f9bf811a759186,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 11
+      value: 9.5
       objectReference: {fileID: 0}
     - target: {fileID: 8486855686726631494, guid: ab8bc097c26bd56438f9bf811a759186,
         type: 3}
@@ -252,22 +253,22 @@ PrefabInstance:
     - target: {fileID: 8486855686726631494, guid: ab8bc097c26bd56438f9bf811a759186,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8486855686726631494, guid: ab8bc097c26bd56438f9bf811a759186,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8486855686726631494, guid: ab8bc097c26bd56438f9bf811a759186,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8486855686726631494, guid: ab8bc097c26bd56438f9bf811a759186,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8486855686726631494, guid: ab8bc097c26bd56438f9bf811a759186,
         type: 3}
@@ -287,14 +288,15 @@ PrefabInstance:
     - target: {fileID: 8486855686726631494, guid: ab8bc097c26bd56438f9bf811a759186,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 8486855686726631495, guid: ab8bc097c26bd56438f9bf811a759186,
         type: 3}
       propertyPath: m_Name
       value: Temp Pipe Top
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -1851937068610608112, guid: ab8bc097c26bd56438f9bf811a759186, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ab8bc097c26bd56438f9bf811a759186, type: 3}
 --- !u!4 &4287137024439363636 stripped
 Transform:

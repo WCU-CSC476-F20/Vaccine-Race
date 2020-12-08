@@ -11,6 +11,7 @@ TagManager:
   - Pickup
   - Map Generator
   - Pipe Group
+  - Cloud
   layers:
   - Default
   - TransparentFX
