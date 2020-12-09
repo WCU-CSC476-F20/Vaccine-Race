@@ -1503,6 +1503,7 @@ MonoBehaviour:
   spacing: 6
   randHeightOffset: 2
   maxDistance: -10
+  difficulty: 1
   randPickupSpawnChance: 0.5
   randPosOffset: {x: 1, y: 2}
   cloudPrefab: {fileID: 4688995741619122669, guid: ffa5433a88d80f04eb665551566acb89,

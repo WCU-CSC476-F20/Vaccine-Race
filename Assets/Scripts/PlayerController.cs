@@ -10,11 +10,13 @@ public class PlayerController : MonoBehaviour
 
     private Rigidbody2D rb;
     private GameController gameController;
+    private MapGenerator mapGenerator;
     private bool jump;
 
     private void Awake()
     {
         gameController = GameObject.FindGameObjectWithTag("Game Controller").GetComponent<GameController>();
+        mapGenerator = GameObject.FindGameObjectWithTag("Map Generator").GetComponent<MapGenerator>();
         rb = GetComponent<Rigidbody2D>();
     }
 
@@ -61,6 +63,11 @@ public class PlayerController : MonoBehaviour
         if(collision.CompareTag("Point"))
         {
             gameController.score++;
+
+            if(gameController.score % mapGenerator.difficultyLevel == 0 && gameController.score != 0 && mapGenerator.spacing > 4)
+            {
+                mapGenerator.spacing -= mapGenerator.difficulty;
+            }
         }
         else if(collision.CompareTag("Pipe"))
         {
