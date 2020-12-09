@@ -530,7 +530,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 179095177}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 225517119}
+        m_MethodName: EquipGreen
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &179095177
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1912,7 +1923,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 981188050}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 225517119}
+        m_MethodName: PurchaseGreen
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &981188050
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2109,7 +2131,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1245508215}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 225517119}
+        m_MethodName: EquipPurple
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1245508215
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2329,7 +2362,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1360372401}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 225517119}
+        m_MethodName: PurchaseRed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1360372401
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2656,7 +2700,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1498975645}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 225517119}
+        m_MethodName: EquipRed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1498975645
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3135,7 +3190,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1614605100}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 225517119}
+        m_MethodName: EquipTeal
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1614605100
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3932,7 +3998,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1863796239}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 225517119}
+        m_MethodName: PurchasePurple
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1863796239
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4162,7 +4239,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1975400733}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 225517119}
+        m_MethodName: EquipBlue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1975400733
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4448,7 +4536,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2082034049}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 225517119}
+        m_MethodName: PurchaseTeal
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2082034049
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4641,7 +4740,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2101281684}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 225517119}
+        m_MethodName: PurchaseBlue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2101281684
 MonoBehaviour:
   m_ObjectHideFlags: 0
