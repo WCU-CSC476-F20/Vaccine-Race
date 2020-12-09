@@ -68,7 +68,7 @@ public class PlayerController : MonoBehaviour
         }
         else if(collision.CompareTag("Pickup"))
         {
-            gameController.PlayerCoins();
+            gameController.coins += 5;
             Destroy(collision.gameObject);
         }
     }

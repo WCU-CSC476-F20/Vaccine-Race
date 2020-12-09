@@ -52,11 +52,7 @@ public class GameController : MonoBehaviour
         gameOver = false;
         spawnBounds = GameObject.FindGameObjectWithTag("Spawn Bounds").GetComponent<BoxCollider2D>();
         playersprite = GameObject.FindGameObjectWithTag("Player").GetComponent<SpriteRenderer>().sprite;
-        if (PlayerPrefs.HasKey("Coins"))
-        {
-            int COINS = PlayerPrefs.GetInt("Coins");
-            coins = COINS;
-        }
+
     }
 
     // Start is called before the first frame update
@@ -73,6 +69,8 @@ public class GameController : MonoBehaviour
         //Pauses the game
         if (Input.GetKeyDown(KeyCode.Escape))
             isPaused = !isPaused;
+
+        PlayerCoins();
 
 
         //Updates the score display
@@ -132,9 +130,11 @@ public class GameController : MonoBehaviour
         if (PlayerPrefs.HasKey("Coins"))
         {
             int COINS = PlayerPrefs.GetInt("Coins");
-            PlayerPrefs.SetInt("Coins", COINS + 1);
-            coinsUI.text = COINS.ToString();
-            coins = COINS;
+
+            if (coins != COINS)
+            {
+                PlayerPrefs.SetInt("Coins", coins);
+            }
         }
         else
         {
@@ -206,27 +206,22 @@ public class GameController : MonoBehaviour
     public void EquipRed()
     {
         playersprite = redCorona;
-        GameObject.FindGameObjectWithTag("Player").GetComponent<SpriteRenderer>().sprite = playersprite;
     }
     public void EquipBlue()
     {
         playersprite = blueCorona;
-        GameObject.FindGameObjectWithTag("Player").GetComponent<SpriteRenderer>().sprite = playersprite;
     }
     public void EquipGreen()
     {
         playersprite = greenCorona;
-        GameObject.FindGameObjectWithTag("Player").GetComponent<SpriteRenderer>().sprite = playersprite;
     }
     public void EquipTeal()
     {
         playersprite = tealCorona;
-        GameObject.FindGameObjectWithTag("Player").GetComponent<SpriteRenderer>().sprite = playersprite;
     }
     public void EquipPurple()
     {
         playersprite = purpleCorona;
-        GameObject.FindGameObjectWithTag("Player").GetComponent<SpriteRenderer>().sprite = playersprite;
     }
     private void ReloadScene()
     {
