@@ -12,7 +12,8 @@ public class MapGenerator : MonoBehaviour
     public int numPipes = 6;
     public float spacing = 4f;
     public float randHeightOffset = 1.5f;
-    public float maxDistance = 10f;
+    public float maxDistanceBeforeDestroy = 10f;
+    public float difficulty = 0.10f;
 
     [Header("Pickup Spawning Settings")]
     public float randPickupSpawnChance = 0.35f;
