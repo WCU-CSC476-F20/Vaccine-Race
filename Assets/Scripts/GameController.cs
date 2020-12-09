@@ -8,6 +8,7 @@ public class GameController : MonoBehaviour
 {
     [Header("Score")]
     public int score;
+    public int coins;
 
     [Header("Game Settings")]
     public float spawnBuffer = 0.5f;
@@ -25,13 +26,33 @@ public class GameController : MonoBehaviour
     public GameObject closeshopUI;
     public Text currentScore;
     public Text topScore;
+    public GameObject purchaseRed;
+    public GameObject equipRed;
+    public GameObject purchaseBlue;
+    public GameObject equipBlue;
+    public GameObject purchaseGreen;
+    public GameObject equipGreen;
+    public GameObject purchaseTeal;
+    public GameObject equipTeal;
+    public GameObject purchasePurple;
+    public GameObject equipPurple;
+    public Text coinsUI;
+
+    [Header("Sprites")]
+    public Sprite redCorona;
+    public Sprite greenCorona;
+    public Sprite tealCorona;
+    public Sprite blueCorona;
+    public Sprite purpleCorona;
 
     private BoxCollider2D spawnBounds;
-
+    private Sprite playersprite;
     private void Awake()
     {
         gameOver = false;
         spawnBounds = GameObject.FindGameObjectWithTag("Spawn Bounds").GetComponent<BoxCollider2D>();
+        playersprite = GameObject.FindGameObjectWithTag("Player").GetComponent<SpriteRenderer>().sprite;
+
     }
 
     // Start is called before the first frame update
@@ -51,6 +72,7 @@ public class GameController : MonoBehaviour
 
         //Updates the score display
         scoreText.text = score.ToString();
+        coinsUI.text = coins.ToString();
     }
 
     private void SetSpawnBounds()
@@ -108,6 +130,76 @@ public class GameController : MonoBehaviour
         shopUI.SetActive(false);
         closeshopUI.SetActive(false);
         openshopUI.SetActive(true);
+    }
+    public void PurchaseRed()
+    {
+        if (coins >= 5)
+        {
+            coins = coins - 5;
+            coinsUI.text = coins.ToString();
+            purchaseRed.SetActive(false);
+            equipRed.SetActive(true);
+        }
+    }
+    public void PurchaseBlue()
+    {
+        if (coins >= 10)
+        {
+            coins = coins - 10;
+            coinsUI.text = coins.ToString();
+            purchaseBlue.SetActive(false);
+            equipBlue.SetActive(true);
+        }
+    }
+    public void PurchaseTeal()
+    {
+        if (coins >= 5)
+        {
+            coins = coins - 5;
+            coinsUI.text = coins.ToString();
+            purchaseTeal.SetActive(false);
+            equipTeal.SetActive(true);
+        }
+    }
+    public void PurchaseGreen()
+    {
+        if (coins >= 15)
+        {
+            coins = coins - 15;
+            coinsUI.text = coins.ToString();
+            purchaseGreen.SetActive(false);
+            equipGreen.SetActive(true);
+        }
+    }
+    public void PurchasePurple()
+    {
+        if (coins >= 15)
+        {
+            coins = coins - 15;
+            coinsUI.text = coins.ToString();
+            purchasePurple.SetActive(false);
+            equipPurple.SetActive(true);
+        }
+    }
+    public void EquipRed()
+    {
+        playersprite = redCorona;
+    }
+    public void EquipBlue()
+    {
+        playersprite = blueCorona;
+    }
+    public void EquipGreen()
+    {
+        playersprite = greenCorona;
+    }
+    public void EquipTeal()
+    {
+        playersprite = tealCorona;
+    }
+    public void EquipPurple()
+    {
+        playersprite = purpleCorona;
     }
     private void ReloadScene()
     {

@@ -440,7 +440,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Purchase
+  m_Text: Purchase(5)
 --- !u!222 &152658460
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -655,6 +655,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: 0
+  coins: 0
   spawnBuffer: 0.5
   isPaused: 1
   gameOver: 0
@@ -668,6 +669,22 @@ MonoBehaviour:
   closeshopUI: {fileID: 1488803670}
   currentScore: {fileID: 1431680226}
   topScore: {fileID: 351613774}
+  purchaseRed: {fileID: 1360372398}
+  equipRed: {fileID: 1498975642}
+  purchaseBlue: {fileID: 2101281681}
+  equipBlue: {fileID: 1975400730}
+  purchaseGreen: {fileID: 981188047}
+  equipGreen: {fileID: 179095174}
+  purchaseTeal: {fileID: 2082034046}
+  equipTeal: {fileID: 1614605097}
+  purchasePurple: {fileID: 1863796236}
+  equipPurple: {fileID: 1245508212}
+  coinsUI: {fileID: 247595283}
+  redCorona: {fileID: 0}
+  greenCorona: {fileID: 0}
+  tealCorona: {fileID: 0}
+  blueCorona: {fileID: 0}
+  purpleCorona: {fileID: 0}
 --- !u!4 &225517120
 Transform:
   m_ObjectHideFlags: 0
@@ -3028,7 +3045,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Purchase
+  m_Text: Purchase(15)
 --- !u!222 &1594758594
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3521,7 +3538,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Purchase
+  m_Text: Purchase(15)
 --- !u!222 &1729549842
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3825,7 +3842,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Purchase
+  m_Text: Purchase(10)
 --- !u!222 &1792095128
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4200,7 +4217,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2053150883
 RectTransform:
   m_ObjectHideFlags: 0
