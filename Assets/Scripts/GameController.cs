@@ -70,9 +70,14 @@ public class GameController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
             isPaused = !isPaused;
 
+        PlayerCoins();
+
+
         //Updates the score display
         scoreText.text = score.ToString();
         coinsUI.text = coins.ToString();
+
+        
     }
 
     private void SetSpawnBounds()
@@ -116,8 +121,25 @@ public class GameController : MonoBehaviour
             PlayerPrefs.SetInt("TopScore", score);
             topScore.text = "High Score: " + score.ToString();
         }
+        
 
         currentScore.text = "Current Score: " + score.ToString();
+    }
+    public void PlayerCoins()
+    {
+        if (PlayerPrefs.HasKey("Coins"))
+        {
+            int COINS = PlayerPrefs.GetInt("Coins");
+
+            if (coins != COINS)
+            {
+                PlayerPrefs.SetInt("Coins", coins);
+            }
+        }
+        else
+        {
+            PlayerPrefs.SetInt("Coins", coins);
+        }
     }
     public void OpenShop()
     {

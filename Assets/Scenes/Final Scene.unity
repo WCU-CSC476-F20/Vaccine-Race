@@ -680,11 +680,11 @@ MonoBehaviour:
   purchasePurple: {fileID: 1863796236}
   equipPurple: {fileID: 1245508212}
   coinsUI: {fileID: 247595283}
-  redCorona: {fileID: 0}
-  greenCorona: {fileID: 0}
-  tealCorona: {fileID: 0}
-  blueCorona: {fileID: 0}
-  purpleCorona: {fileID: 0}
+  redCorona: {fileID: 21300000, guid: 7afb14fe23b28b642adaefdf995b7a75, type: 3}
+  greenCorona: {fileID: 21300000, guid: b7a2ce976664d504e97d1a5279aa062e, type: 3}
+  tealCorona: {fileID: 21300000, guid: 8d23e1f5cdf232d45808f2e8e671fd98, type: 3}
+  blueCorona: {fileID: 21300000, guid: a956ebae9f5828342936363360597ced, type: 3}
+  purpleCorona: {fileID: 21300000, guid: eff88340cd270c84ca2250b12f033f1c, type: 3}
 --- !u!4 &225517120
 Transform:
   m_ObjectHideFlags: 0
